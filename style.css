@@ -471,6 +471,8 @@ p#typing::after {
 }
 
 .overflow-y {
+    overflow-y: scroll;
+    overflow-x: hidden;
     scrollbar-width: none;
     -ms-scroll-rails: none;
 }
