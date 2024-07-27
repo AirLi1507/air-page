@@ -35,7 +35,7 @@ function terminalOption(number) {
     } else if (number == 2) {
         page(1);
     } else {
-        window.location.reload();
+        page(0);
     }
 }
 
