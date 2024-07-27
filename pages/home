@@ -42,7 +42,7 @@ AAAAAAAA                   AAAAAAA    iiiiiiii      rrrrrrrrr
 
         </div>
     </div>
-    <div class="fc-white" id="options">
+    <div class="fc-white noselect" id="options">
         <span class="terminalOptions" onclick="terminalOption(1)">README.md</span>
         <span class="terminalOptions" onclick="terminalOption(2)">Go to Blog</span>
         <span class="terminalOptions" onclick="terminalOption(3)">Reload</span>

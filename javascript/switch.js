@@ -28,5 +28,3 @@ if (isDarkMode()) {
 } else {
     switchMode(0);
 }
-
-// document.querySelectorAll('.markdown-body').children().forEach(Element => {Element.style.color = "black"});
