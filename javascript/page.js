@@ -16,8 +16,8 @@ function page(number) {
         setInterval(() => {
             $('#options').fadeIn(300);
             $('#options').css('display','flex');
-            console.log('Stage 3 - Fading in page "Home" Card1 Options List');
-        }, 10900);
+            console.log('Stage 3 - Fading in page "Home" Card1 Options List');  
+        }, 9500);
     } else if (number == 1) {
         $('main').load("pages/blog");
     }
