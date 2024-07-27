@@ -22,7 +22,7 @@ function terminalOption(number) {
         $('.cards').fadeOut(400);
         setTimeout(() => {
             $('main').load("pages/readme");
-        }, 500);
+        }, 550);
         setTimeout(() => {
             $('#card2').fadeIn(600);
         }, 620);
