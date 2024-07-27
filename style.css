@@ -1,19 +1,16 @@
-body {font-family: 'Lato', sans-serif; width: 100vw; height: 100dvh; margin: 0; padding: 0; overflow-y: scroll; overflow-x: hidden;}
+body {font-family: 'Lato', sans-serif; width: 100vw; height: 100dvh; margin: 0; padding: 0; overflow: scroll;}
 
 body::-webkit-scrollbar {display: none;}
 
-/* body {animation: Light 0.5s ease 0 forwards normal;} */
-
-/* .background {animation: lightMode 0.4s ease 0 forwards normal running;} */
-
-/* @keyframes lightMode {to {background: linear-gradient(to bottom, #f0f8ff, #cff8fe);}} */
-
-.background {color: #d8edff; background-color: #0a141c; display: flex; transition: all 0.2s linear;}
+.background {color: #d8edff; background-color: #0a141c; display: flex; padding: 0 30px; transition: all 0.2s linear;}
 
 .bgDark {color: #d8edff; background-color: #0a141c;}
 .bgLight {color: #121920; background-color: #def8fc;}
 
 .navLight {border: 0.1em #b2d1ff solid; box-shadow: 0 0 10px rgba(20, 20, 20, 0.6);}
+
+.borderDark {border-color: gainsboro;}
+.borderLight {border-color: rgb(53, 53, 53);}
 
 header {
     position: sticky;
@@ -24,7 +21,6 @@ header {
     flex-direction: column;
     justify-content: center;
 
-    padding-left: 30px;
     box-sizing: border-box;
 
     -ms-overflow-style: none; 
@@ -80,36 +76,56 @@ nav {
 
 .nav-item:active {color: #d8edff; border-color: #d8edff;}
 
-.nav-item::after {position: absolute; color: transparent; font-size: 20px; margin-left: 70px; padding: 6px 12px; border: 0.6px transparent solid; display: none; align-items: center; transition: 0.3s ease;}
+.nav-item::after {
+    position: absolute; 
+
+    color: transparent; 
+    font-size: 20px; 
+    
+    margin-left: 70px; 
+    
+    border: 0.6px transparent solid; 
+    
+    display: none; 
+    align-items: center; 
+    
+    padding: 6px 12px;
+    
+    transition: 0.3s ease;}
 
 .nav-item:hover::after {
-    display: flex;
     color: white;
+
     background-color: rgba(26, 26, 26, 0.7);
     border: 0.6px rgba(82, 82, 82, 0.5) solid;
     border-radius: calc(0.2vw + 0.2vh);
-    animation: opacity 0.8s ease;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    display: flex;
+
+    animation: opacity 0.5s ease;
 }
 
 #home:hover::after {content: "Home";}
 #blog:hover::after {content: "Blog";}
 #search:hover::after {content: "Search";}
 #instagram:hover::after {content: "Instagram";}
-#discord:hover::after {content: "Discord";}
+#github:hover::after {content: "Github";}
 
 
 button#switch {
     position: absolute;
 
     color: #0a141c;
-    font-size: 30px;
+    font-size: 22px;
     font-weight: bolder;
 
     width: 34px;
     height: 34px;
 
     top: 30px;
-    right: 45px;
+    right: 20px;
     z-index: 9999;
 
     background-color: aliceblue;
@@ -128,10 +144,307 @@ button#switch {
     -webkit-tap-highlight-color: transparent;
 }
 
+main {
+    position: static;
+
+    width: 80%;
+
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+}
+
+.cards {
+
+    width: 80%;
+    height: 700px;
+
+    background-color: rgba(26, 26, 26, 0.7);
+    border: 0.1em rgba(82, 82, 82, 0.5) solid;
+    box-shadow: 0 0 8px rgba(200, 200, 200, 0.5);
+    border-radius: calc(0.75vw + 0.75vh);
+
+    box-sizing: border-box;
+
+    display: none;
+}
+
+div#card1 {
+    position: relative;
+
+    background-color: black;
+    border: 0.2em rgb(82, 82, 82) solid;
+
+    flex-direction: column;
+
+    padding: 1.8%;
+}
+
+div#info {
+    color: aliceblue;
+
+    width: 100%;
+    height: 0;
+
+    margin-top: 30px;
+
+    padding: 6px;
+    box-sizing: border-box;
+
+    opacity: 0;
+
+    display: flex;
+    justify-content: start;
+
+    animation: opacity 1s ease 6.1s forwards normal running;
+}
+
+pre {content: '1'; animation: opacity 1s ease 6.1s forwards normal running;}
+
+#ascii-art {font-family: monospace; white-space: pre;}
+
+div#info-text {
+
+    margin-left: 40px;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+div#options {
+    position: absolute;
+
+    width: 95%;
+    height: 50px;
+
+    bottom: 16px;
+    left: 2.5%;
+
+    box-sizing: border-box;
+
+    display: none;
+    gap: 16px;
+
+}
+
+span.terminalOptions {
+    position: relative;
+
+    font-size: 20px;
+
+    height: 50px;
+
+    background-color: transparent;
+    border: 2.5px rgb(82, 82, 82) dotted;
+    border-radius: 6px;
+    backdrop-filter: blur(10px);
+
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    
+    z-index: 1;
+
+    transition: all 0.3s ease;
+}
+
+span.terminalOptions:hover {color: rgb(189, 189, 189); text-shadow: 1px 1px 15px white;}
+
+span.terminalOptions:after {position: absolute; content: ''; width: 90%; height: 100%; background: linear-gradient(to right, transparent, rgba(55, 155, 255, 0.45), transparent); z-index: -1; opacity: 0; transition: all 0.3s ease;}
+
+span.terminalOptions:hover::after {opacity: 1;}
+
+div#card2 {
+
+    height: fit-content;
+
+    background-color: transparent;
+    border: 2px solid;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 3%;
+}
+
+p#typing {height: fit-content; margin: 0;}
+
+p#typing::after {
+    content: "";
+
+    animation: typeCursor 1s ease 0s 5, neofetchCmd 0.6s ease 5.2s forwards normal;
+}
 /* Keyframes - Start */
 
 @keyframes opacity {
     from {opacity: 0;} to {opacity: 1;}
 }
 
+@keyframes typeCursor {0% {content: '';} 100% {content: '_';}}
+
+@keyframes neofetchCmd {
+    0% {content: '';}
+    12.5% {content: 'n';}
+    25% {content: 'ne';}
+    37.5% {content: 'neo';}
+    50% {content: 'neof';}
+    62.5% {content: 'neofe';}
+    75% {content: 'neofet';}
+    87.5% {content: 'neofetc';}
+    100% {content: 'neofetch';}
+}
+
+@keyframes loadDotSh {
+    
+}
+
+@keyframes expandY {
+    from {height: 0;}
+    to {height: fit-content;}
+}
+
 /* Keyframes - Ended */
+
+/* Font Colours - Start */
+
+.fc-red {color: red;}
+
+.fc-orange {color: orange;}
+
+.fc-yellow {color: #ffeb00;}
+
+.fc-green {color: #36ff36;}
+
+.fc-teal {color: teal;}
+
+.fc-aqua {color: aqua;}
+
+.fc-skyblue {color: skyblue;}
+
+.fc-blue1 {color: #2855bf;}
+
+.fc-blue2 {color: #2828bf;}
+
+.fc-purple {color: #c200c2;}
+
+.fc-white {color: white;}
+
+.fc-grey {color: #acacac;}
+
+.fc-black {color: #120f1a;}
+
+.e {color: rgb(213, 213, 213);}
+
+/* Font Colours - Ended */
+
+/* Font Size - Start */
+
+.fs-1 {
+    font-size: 5px;
+}
+
+.fs-2 {
+    font-size: 10px;
+}
+
+.fs-3 {
+    font-size: 15px;
+}
+
+.fs-4 {
+    font-size: 20px;
+}
+
+.fs-5 {
+    font-size: 25px;
+}
+
+.fs-6 {
+    font-size: 30px;
+}
+
+.fs-7 {
+    font-size: 35px;
+}
+
+.fs-8 {
+    font-size: 40px;
+}
+
+.fs-9 {
+    font-size: 45px;
+}
+
+.fs-10 {
+    font-size: 50px
+}
+
+.fs-12 {
+    font-size: 62.5px;
+}
+
+.fs-15 {
+    font-size: 75px
+}
+
+
+.fs-20 {
+    font-size: 100px;
+}
+
+/* Font Size - Ended */
+
+/* Font Misc - Start */
+
+.text-shadow {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* Font Misc - Ended */
+
+/* Font Families - Start */
+
+.font-hack {font-family: Hack, monospace; margin: 0;}
+
+/* Font Families - Ended */
+
+/* Transform Scale - Start */
+
+.scale-05 {transform: scale(1.025);}
+
+.scale-1 {transform: scale(1.05);}
+
+.scale-2 {transform: scale(1.1);}
+
+
+/* Transform Scale - Ended */
+
+:root {
+    -wekbit-link: red;
+}
+
+
+@media screen and (max-width: 1440px) {
+    span#ascii-art {
+        font-size: 10px;
+    }
+}

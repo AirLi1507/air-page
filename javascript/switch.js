@@ -5,6 +5,7 @@ function switchMode(mode) {
     if (mode === 0) {
         document.querySelector('nav').classList.add('navLight');
         $('.background').removeClass('bgDark').addClass('bgLight');
+        $('.borderDark').removeClass('borderDark').addClass('borderLight');
         $('#switch').children().attr('name','moon-outline');
         $('#switch').css({
             backgroundColor : '#0a141c',
@@ -13,6 +14,7 @@ function switchMode(mode) {
     } else {
         document.querySelector('nav').classList.remove('navLight');
         $('.background').removeClass('bgLight').addClass('bgDark');
+        $('.borderLight').addClass('borderDark').removeClass('borderLight');
         $('#switch').children().attr('name','sunny-outline');
         $('#switch').css({
             backgroundColor : 'aliceblue',
@@ -26,3 +28,5 @@ if (isDarkMode()) {
 } else {
     switchMode(0);
 }
+
+// document.querySelectorAll('.markdown-body').children().forEach(Element => {Element.style.color = "black"});

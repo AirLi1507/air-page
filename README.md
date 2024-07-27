@@ -12,8 +12,12 @@ I've seen so many blogs/sites written by people to introduce themselves on the i
 
 ### 📐 **Techstack for this site** 🛠️
 
-- 🟧 **<span style="color: orange">HTML</span>** 🟧
-- 🟦 **<span style="color: skyblue">CSS</span>** 🟦
-- 🟨 **<span style="color: yellow">Javascript</span>** 🟨
+- 🟧 **<span style="background-color: orange; color: white; font-weight: bolder">HTML</span>** 🟧
 
-#### Yes, as I said before, I'm a noob frontend developer, I have totally no idea about any frameworks 🙌🏻,  so I'm using pure HTML+CSS+JS ❗
+- 🟦 **<span style="background-color: #2855bf; color: aliceblue; font-weight: bolder">CSS</span>** 🟦
+
+- 🟨 **<span style="background-color: #ffeb00; color: black">Javascript</span>** 🟨
+
+- 🔵 **<span class="fc-blue1">[Ionic Framework](https://ionicframework.com/)</span>** 🔵
+
+#### Yes, as I said before, I'm a noob frontend developer, I have totally no idea about any frameworks 🙌🏻,  so I'm using almost pure HTML+CSS+JS ❗
