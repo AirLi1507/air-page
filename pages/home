@@ -1,45 +1,46 @@
 <div class="cards" id="card1">
-    <p class="fs-5 fc-grey noselect" id="typing">
-        <span class="fc-green">guest@air-page</span>
-        <span class="fc-grey">:</span>
-        <span class="fc-blue1">~</span>
-        <span class="fc-grey">$</span>
-    </p>
-    <div class="noselect" id="info">
-        <span id="ascii-art">
-               <span class="fc-skyblue">AAA</span>
-              <span class="fc-skyblue">A:::A</span>                     <span class="fc-skyblue">iiii</span>
-             <span class="fc-skyblue">A:::::A</span>                   <span class="fc-skyblue">i::::i</span>
-            A:::::::A                                        
-           A:::::::::A                 iiiiii      rrrrrr   rrrrrrrrr
-          A:::::A:::::A                i::::i      r::::rrr:::::::::r
-         A:::::A A:::::A               i::::i      r:::::::::::::::::r
-        A:::::A   A:::::A              i::::i      rr::::::rrrrr::::::r
-       A:::::A     A:::::A             i::::i       r:::::r      r:::::r
-      A:::::AAAAAAAAA:::::A            i::::i        r:::::r      rrrrrrr
-     A:::::::::::::::::::::A           i::::i        r:::::r
-    A:::::AAAAAAAAAAAAA:::::A          i::::i        r:::::r
-   A:::::A             A:::::A        i::::::i       r:::::r
-  A:::::A               A:::::A       i::::::i       r:::::r
- A::::::A                 A:::::A     i::::::i       r:::::r
-AAAAAAAA                   AAAAAAA    iiiiiiii      rrrrrrrrr
-        </span>
-        <div class="fs-4 font-hack" id="info-text">
-            <span class="fc-skyblue">guest<span class="fc-grey">@</span>air-page</span>
-            <span class="fc-grey">-----------------</span>
-            <span class="fc-skyblue">OS<span class="fc-grey">: PageOS 12.6.0</span></span>
-            <span class="fc-skyblue">Kernel<span class="fc-grey">: 6.1.0-23-amd256</span></span>
-            <span class="fc-skyblue">Uptime<span class="fc-grey">: 14 Years, ?? Days, ?? Hours</span></span>
-            <span class="fc-skyblue">Packages<span class="fc-grey">: 15054 (suspkg)</span></span>
-            <span class="fc-skyblue">Shell<span class="fc-grey">: seashell 5.2.15</span></span>
-            <span class="fc-skyblue">Resolution<span class="fc-grey">: 1920x1080</span></span>
-            <span class="fc-skyblue">WM<span class="fc-grey">: PageLand</span></span>
-            <span class="fc-skyblue">WM Theme<span class="fc-grey">: VanillaPage</span></span>
-            <span class="fc-skyblue">Terminal<span class="fc-grey">: AirTerm</span></span>
-            <span class="fc-skyblue">CPU<span class="fc-grey">: AMD Xeon E5-2680 v4 (256) @ 9.300GHz</span></span>
-            <span class="fc-skyblue">GPU<span class="fc-grey">: &VDIA GeForce RTX 9660 SUPER</span></span>
-            <span class="fc-skyblue">Memory<span class="fc-grey">: 319300MiB / 319300MiB</span></span>
-
+    <div class="overflow-y">
+        <p class="fs-5 fc-grey noselect" id="typing">
+            <span class="fc-green">guest@air-page</span>
+            <span class="fc-grey">:</span>
+            <span class="fc-blue1">~</span>
+            <span class="fc-grey">$</span>
+        </p>
+        <div class="noselect" id="info">
+            <span id="ascii-art">
+                   <span class="fc-skyblue">AAA</span>
+                  <span class="fc-skyblue">A:::A</span>                     <span class="fc-skyblue">iiii</span>
+                 <span class="fc-skyblue">A:::::A</span>                   <span class="fc-skyblue">i::::i</span>
+                A:::::::A                                        
+               A:::::::::A                 iiiiii      rrrrrr   rrrrrrrrr
+              A:::::A:::::A                i::::i      r::::rrr:::::::::r
+             A:::::A A:::::A               i::::i      r:::::::::::::::::r
+            A:::::A   A:::::A              i::::i      rr::::::rrrrr::::::r
+           A:::::A     A:::::A             i::::i       r:::::r      r:::::r
+          A:::::AAAAAAAAA:::::A            i::::i        r:::::r      rrrrrrr
+         A:::::::::::::::::::::A           i::::i        r:::::r
+        A:::::AAAAAAAAAAAAA:::::A          i::::i        r:::::r
+       A:::::A             A:::::A        i::::::i       r:::::r
+      A:::::A               A:::::A       i::::::i       r:::::r
+     A::::::A                 A:::::A     i::::::i       r:::::r
+    AAAAAAAA                   AAAAAAA    iiiiiiii      rrrrrrrrr
+            </span>
+            <div class="fs-4 font-hack" id="info-text">
+                <span class="fc-skyblue">guest<span class="fc-grey">@</span>air-page</span>
+                <span class="fc-grey">-----------------</span>
+                <span class="fc-skyblue">OS<span class="fc-grey">: PageOS 12.6.0</span></span>
+                <span class="fc-skyblue">Kernel<span class="fc-grey">: 6.1.0-23-amd256</span></span>
+                <span class="fc-skyblue">Uptime<span class="fc-grey">: 14 Years, ?? Days, ?? Hours</span></span>
+                <span class="fc-skyblue">Packages<span class="fc-grey">: 15054 (suspkg)</span></span>
+                <span class="fc-skyblue">Shell<span class="fc-grey">: seashell 5.2.15</span></span>
+                <span class="fc-skyblue">Resolution<span class="fc-grey">: 1920x1080</span></span>
+                <span class="fc-skyblue">WM<span class="fc-grey">: PageLand</span></span>
+                <span class="fc-skyblue">WM Theme<span class="fc-grey">: VanillaPage</span></span>
+                <span class="fc-skyblue">Terminal<span class="fc-grey">: AirTerm</span></span>
+                <span class="fc-skyblue">CPU<span class="fc-grey">: AMD Xeon E5-2680 v4 (256) @ 9.300GHz</span></span>
+                <span class="fc-skyblue">GPU<span class="fc-grey">: &VDIA GeForce RTX 9660 SUPER</span></span>
+                <span class="fc-skyblue">Memory<span class="fc-grey">: 319300MiB / 319300MiB</span></span>
+            </div>
         </div>
     </div>
     <div class="fc-white noselect" id="options">

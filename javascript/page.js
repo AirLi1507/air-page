@@ -10,6 +10,7 @@ function page(number) {
 
         setTimeout(() => {
             $('#card1').fadeIn(300);
+            loadNeofetch();
             console.log('Stage 2 - Fading in page "Home" Card1');
 
         }, 600);
@@ -17,7 +18,7 @@ function page(number) {
             $('#options').fadeIn(300);
             $('#options').css('display','flex');
             console.log('Stage 3 - Fading in page "Home" Card1 Options List');  
-        }, 8250);
+        }, 7250);
     } else if (number == 1) {
         $('main').load("pages/blog");
     }
