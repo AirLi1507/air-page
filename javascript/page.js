@@ -1,10 +1,10 @@
 
 function page(number) {
     if (number == 0) {
-        $('.cards').fadeOut(300);
+        $('.cards').fadeOut(200);
         setTimeout(() => {
             $('main').load("pages/home");
-        }, 500);
+        }, 300);
         setTimeout(() => {
             $('#card1').fadeIn(300);
         }, 600);
