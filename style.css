@@ -1,3 +1,9 @@
+:root {
+    /* --text-shadow-1: 1px 1px 5px rgba(40, 105, 133, 0.3); */
+    --bg-color1: rgba(26, 26, 26, 0.7);
+    --bg-color2: rgba(26, 26, 26, 0.5);
+}
+
 body {font-family: 'Lato', sans-serif; width: 100vw; height: 100svh; margin: 0; padding: 0; overflow: hidden;}
 
 body::-webkit-scrollbar {display: none;}
@@ -11,6 +17,18 @@ body::-webkit-scrollbar {display: none;}
 
 .borderDark {border-color: gainsboro;}
 .borderLight {border-color: rgb(53, 53, 53);}
+
+.translucentDarkBg {
+    background-color: var(--bg-color1);
+    border: 0.1em rgba(82, 82, 82, 0.5) solid;
+    box-shadow: 0 0 8px rgba(200, 200, 200, 0.5);
+}
+
+.translucentLightBg {
+    background-color: var(--bg-color2);
+    border: 0.15em rgba(82, 82, 82, 0.5) solid;
+    box-shadow: 0 0 4.5px rgba(72, 72, 72, 0.5);
+}
 
 header {
     position: sticky;
@@ -33,7 +51,7 @@ nav {
     width: fit-content;
     height: fit-content;
 
-    background-color: rgba(26, 26, 26, 0.7);
+    background-color: var(--bg-color1);
     border: 0.1em rgba(82, 82, 82, 0.5) solid;
     box-shadow: 0 0 8px rgba(200, 200, 200, 0.1);
     border-radius: calc(0.75vw + 0.75vh);
@@ -100,7 +118,7 @@ nav {
 .nav-item:hover::after {
     color: white;
 
-    background-color: rgba(26, 26, 26, 0.7);
+    background-color: var(--bg-color1);
     border: 0.6px rgba(82, 82, 82, 0.5) solid;
     border-radius: calc(0.2vw + 0.2vh);
     backdrop-filter: blur(2px);
@@ -164,9 +182,6 @@ main {
     width: 80%;
     height: 700px;
 
-    background-color: rgba(26, 26, 26, 0.7);
-    border: 0.1em rgba(82, 82, 82, 0.5) solid;
-    box-shadow: 0 0 8px rgba(200, 200, 200, 0.5);
     border-radius: calc(0.75vw + 0.75vh);
 
     box-sizing: border-box;
@@ -176,9 +191,6 @@ main {
 
 div#card1 {
     position: relative;
-
-    background-color: black;
-    border: 0.2em rgb(82, 82, 82) solid;
 
     flex-direction: column;
 
@@ -236,7 +248,8 @@ span.terminalOptions {
     height: 50px;
 
     background-color: transparent;
-    border: 2.5px rgb(82, 82, 82) dotted;
+    border-width: 2.5px;
+    border-style: dotted;
     border-radius: 6px;
     backdrop-filter: blur(10px);
 
@@ -252,9 +265,9 @@ span.terminalOptions {
     transition: all 0.3s ease;
 }
 
-span.terminalOptions:hover {color: rgb(189, 189, 189); text-shadow: 1px 1px 15px white;}
+span.terminalOptions:hover {color: rgb(203, 203, 203); text-shadow: 1px 1px 15px white;}
 
-span.terminalOptions:after {position: absolute; content: ''; width: 90%; height: 100%; background: linear-gradient(to right, transparent, rgba(55, 155, 255, 0.45), transparent); z-index: -1; opacity: 0; transition: all 0.3s ease;}
+span.terminalOptions:after {position: absolute; content: ''; width: 90%; height: 100%; background: linear-gradient(to right, transparent, rgba(90, 172, 255, 0.6), transparent); z-index: -1; opacity: 0; transition: all 0.3s ease;}
 
 span.terminalOptions:hover::after {opacity: 1;}
 
@@ -434,11 +447,6 @@ p#typing::after {
 
 
 /* Transform Scale - Ended */
-
-:root {
-    -wekbit-link: red;
-}
-
 
 @media screen and (max-width: 1440px) {
     .cards {

@@ -1,12 +1,12 @@
-<div class="cards" id="card1">
+<div class="cards translucentDarkBg" id="card1">
     <div class="overflow-y">
-        <p class="fs-5 fc-grey noselect" id="typing">
+        <p class="fs-5 fc-grey text-shadow noselect" id="typing">
             <span class="fc-green">guest@air-page</span>
             <span class="fc-grey">:</span>
             <span class="fc-blue1">~</span>
             <span class="fc-grey">$</span>
         </p>
-        <div class="noselect" id="info">
+        <div class="text-shadow noselect" id="info">
             <span id="ascii-art">
                    <span class="fc-skyblue">AAA</span>
                   <span class="fc-skyblue">A:::A</span>                     <span class="fc-skyblue">iiii</span>
@@ -44,8 +44,8 @@
         </div>
     </div>
     <div class="fc-white noselect" id="options">
-        <span class="terminalOptions" onclick="terminalOption(1)">README.md</span>
-        <span class="terminalOptions" onclick="terminalOption(2)">Go to Blog</span>
-        <span class="terminalOptions" onclick="terminalOption(3)">Reload</span>
+        <span class="terminalOptions borderDark" onclick="terminalOption(1)">README.md</span>
+        <span class="terminalOptions borderDark" onclick="terminalOption(2)">Go to Blog</span>
+        <span class="terminalOptions borderDark" onclick="terminalOption(3)">Reload</span>
     </div>
 </div>
