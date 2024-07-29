@@ -1,8 +1,8 @@
-body {font-family: 'Lato', sans-serif; width: 100vw; height: 100dvh; margin: 0; padding: 0; overflow: scroll;}
+body {font-family: 'Lato', sans-serif; width: 100vw; height: 100svh; margin: 0; padding: 0; overflow: hidden;}
 
 body::-webkit-scrollbar {display: none;}
 
-.background {color: #d8edff; background-color: #0a141c; display: flex; padding: 0 30px; transition: all 0.2s linear;}
+.background {height: fit-content; color: #d8edff; background-color: #0a141c; display: flex; padding: 0 30px; transition: all 0.2s linear;}
 
 .bgDark {color: #d8edff; background-color: #0a141c;}
 .bgLight {color: #121920; background-color: #def8fc;}
@@ -15,7 +15,7 @@ body::-webkit-scrollbar {display: none;}
 header {
     position: sticky;
 
-    height: 100svh;
+    height: 100dvh;
 
     display: flex;
     flex-direction: column;
@@ -25,6 +25,8 @@ header {
 
     -ms-overflow-style: none; 
     scrollbar-width: none;
+
+    z-index: 9999;
 }
 
 nav {
@@ -87,11 +89,13 @@ nav {
     border: 0.6px transparent solid; 
     
     display: none; 
-    align-items: center; 
+    align-self: center;
+    align-items: center;
     
     padding: 6px 12px;
     
-    transition: 0.3s ease;}
+    transition: 0.3s ease;
+}
 
 .nav-item:hover::after {
     color: white;
@@ -99,7 +103,7 @@ nav {
     background-color: rgba(26, 26, 26, 0.7);
     border: 0.6px rgba(82, 82, 82, 0.5) solid;
     border-radius: calc(0.2vw + 0.2vh);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(4px);
 
     display: flex;
@@ -256,8 +260,6 @@ span.terminalOptions:hover::after {opacity: 1;}
 
 div#card2 {
 
-    height: fit-content;
-
     background-color: transparent;
     border: 2px solid;
 
@@ -272,7 +274,7 @@ p#typing {height: fit-content; margin: 0;}
 p#typing::after {
     content: "";
 
-    animation: typeCursor 1s ease 0s 5, neofetchCmd 0.6s ease 5.2s forwards normal;
+    animation: typeCursor 1s ease 0s 2, neofetchCmd 0.6s ease 2.4s forwards normal;
 }
 /* Keyframes - Start */
 
@@ -439,20 +441,45 @@ p#typing::after {
 
 
 @media screen and (max-width: 1440px) {
-    span#ascii-art {
-        font-size: 60%;
+    .cards {
+        width: 90%;
+        height: 80vh;
+
+        overflow: scroll;
     }
+
+    div.overflow-y {
+        height: 85%;
+
+        overflow-y: scroll;
+
+    }
+
+    nav {padding: 12vh 1vh; gap: 5vh;}
+
+    .nav-item {font-size: 24px;}
+
+    .nav-item::after {font-size: 18px; margin-left: 60px; padding: 6px 10px;}
+
+    span#ascii-art {
+        font-size: 40%;
+    }
+}
+
+@media screen and (max-width: 1440px) and (orientation: portrait) {
+    .cards {height: 800px;}
 }
 
 @media screen and (max-width: 992px) {
 
     div.overflow-y {
-        height: 90%;
-
-        padding-bottom: 10px;
         box-sizing: border-box;
         overflow-y: scroll;
 
+    }
+
+    span#ascii-art {
+        font-size: 50%;
     }
 
     div#info {
@@ -470,11 +497,64 @@ p#typing::after {
     }
 }
 
+@media screen and (max-width: 600px) {
+
+    .background {
+        padding: 0 10px;
+    }
+
+    main {margin: auto 0 auto 10px;}
+
+    nav {padding: 70px 6px; gap: 30px;}
+
+    .nav-item {font-size: 22px;}
+
+    button#switch {top: 12px;}
+
+    .cards {width: 98%; height: 70vh; box-sizing: border-box; overflow: scroll;}
+
+    span#ascii-art {
+        font-size: 50%;
+    }
+
+    div#info {
+        height: fit-content;
+        flex-direction: column;
+
+        box-sizing: content-box;
+    }
+    div#info-text {
+
+        margin-top: 20px;
+        margin-left: 0;
+
+        box-sizing: content-box;
+    }
+
+    div#options {bottom: 6px; gap: 6px;}
+
+    span.terminalOptions {font-size: 0.9em;}
+
+    div.overflow-y {height: 90%;}
+
+    /* span.terminalOptions:first-child {font-size: 14px;} */
+
+}
+
 .overflow-y {
     position: relative;
 
     overflow-y: scroll;
     overflow-x: hidden;
     scrollbar-width: none;
+    -webkit-scrollbar: none;
+    -ms-scroll-rails: none;
+}
+
+.cards {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    -webkit-scrollbar: none;
     -ms-scroll-rails: none;
 }
